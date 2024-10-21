@@ -15,7 +15,7 @@ Evaluation: Assessing the performance of the model and selecting the best one
 
 Deployment: Implementing the model into a production environment
 
-Medium Article: [Crisp-DM]{https://medium.com/@hvr2026/data-science-using-crisp-dm-759e8dccf736}
+Medium Article: [Crisp-DM](https://medium.com/@hvr2026/data-science-using-crisp-dm-759e8dccf736)
 
 
 
@@ -40,7 +40,7 @@ Pattern evaluation: Identify the interesting patterns
 
 Knowledge presentation: Visualize and present the findings 
 
-Medium Article: [KDD]{https://medium.com/@hvr2026/data-science-using-kdd-4315e8da067e}
+Medium Article: [KDD](https://medium.com/@hvr2026/data-science-using-kdd-4315e8da067e)
 
 
 
@@ -59,4 +59,4 @@ Model: Building a predictive model using the prepared data, such as a regression
 
 Assess: Evaluating the model's performance on unseen data to ensure its accuracy and reliability
 
-Medium Article: [SEMMA]{https://medium.com/@hvr2026/data-science-using-semma-0d0cf05fb79d}
+Medium Article: [SEMMA](https://medium.com/@hvr2026/data-science-using-semma-0d0cf05fb79d)
