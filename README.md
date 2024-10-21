@@ -18,6 +18,8 @@ Deployment: Implementing the model into a production environment
 Medium Article: [Crisp-DM]{https://medium.com/@hvr2026/data-science-using-crisp-dm-759e8dccf736}
 
 
+
+
 KDD (Knowledge Discovery in Databases)
 
 Phases:
@@ -39,6 +41,8 @@ Pattern evaluation: Identify the interesting patterns
 Knowledge presentation: Visualize and present the findings 
 
 Medium Article: [KDD]{https://medium.com/@hvr2026/data-science-using-kdd-4315e8da067e}
+
+
 
 
 SEMMA (Sample, Explore, Modify, Model, and Assess)
