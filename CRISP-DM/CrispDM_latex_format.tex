@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Analyzing Airbnb Listings in Seattle Using the CRISP-DM Framework}
+\author{Harshavardhan}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper presents a data analysis of Airbnb listings in Seattle, WA, using the CRISP-DM (Cross-Industry Standard Process for Data Mining) methodology. The primary objective is to identify key factors that influence listing prices and provide insights to Airbnb hosts for pricing strategies. By utilizing machine learning models, specifically Linear Regression and Random Forest Regressor, we explore the relationships between features such as review scores, accommodations, and amenities, and their effect on pricing. The analysis reveals that features like bedrooms, bathrooms, and review scores significantly impact pricing, offering actionable insights for optimizing listing performance.
+\end{abstract}
+
+\section{Introduction}
+In recent years, the short-term rental market has grown substantially, with platforms like Airbnb allowing property owners to list and manage rentals. For hosts, setting the right price is crucial for maximizing occupancy and revenue. This paper applies the CRISP-DM framework to analyze Airbnb listings in Seattle, Washington, to uncover the primary factors that affect listing prices. The insights derived from this study aim to help hosts make data-driven decisions on pricing and improve listing performance.
+
+\section{Methodology}
+The analysis follows the CRISP-DM methodology, which consists of the following phases:
+
+\subsection{Business Understanding}
+The objective is to identify factors that influence Airbnb listing prices. Our research questions are:
+\begin{itemize}
+    \item Which features have the most significant impact on listing prices?
+    \item How can hosts optimize these features to improve booking rates and profitability?
+\end{itemize}
+
+\subsection{Data Understanding}
+We use three datasets:
+\begin{itemize}
+    \item \textbf{Listings:} Contains detailed information about each Airbnb listing, including prices, reviews, and amenities.
+    \item \textbf{Calendar:} Provides daily availability and price information for each listing.
+    \item \textbf{Reviews:} Contains reviews with details like comments, reviewer IDs, and dates.
+\end{itemize}
+
+\subsection{Data Preparation}
+To prepare the data for analysis, we perform several cleaning and preprocessing steps:
+\begin{enumerate}
+    \item \textbf{Price Conversion:} We remove dollar signs (\$) from the price columns and convert them to numeric values.
+    \item \textbf{Missing Values:} We handle missing values in critical fields such as \texttt{review\_scores\_rating} by filling them with median values.
+    \item \textbf{Feature Engineering:} We create new features, such as \texttt{month} and \texttt{year}, to examine trends and seasonal variations.
+    \item \textbf{Merging Data:} The calendar and listings datasets are merged to create a comprehensive dataset, facilitating deeper analysis.
+\end{enumerate}
+
+\subsection{Modeling}
+Two machine learning models, Linear Regression and Random Forest Regressor, are used to predict listing prices based on features like \texttt{review\_scores\_rating}, \texttt{accommodates}, \texttt{bedrooms}, \texttt{bathrooms}, and \texttt{number\_of\_reviews}.
+
+\begin{itemize}
+    \item \textbf{Linear Regression:} Provides a baseline model that highlights linear relationships between features and price.
+    \item \textbf{Random Forest Regressor:} A more sophisticated model that captures complex, non-linear interactions among features.
+\end{itemize}
+
+\subsection{Evaluation}
+We use Mean Absolute Error (MAE) and R-Squared (R\textsuperscript{2}) metrics to evaluate model performance. The Random Forest model achieves better scores, indicating that it more accurately captures the factors influencing prices.
+
+\section{Results}
+The Random Forest model outperforms Linear Regression in predicting Airbnb prices, as indicated by the MAE and R\textsuperscript{2} scores.
+
+\subsection{Feature Importance}
+The most important features identified by the Random Forest model are:
+\begin{itemize}
+    \item \textbf{Bedrooms:} Listings with more bedrooms are priced higher.
+    \item \textbf{Bathrooms:} The number of bathrooms is also a significant factor, as larger accommodations are more appealing to groups.
+    \item \textbf{Review Scores:} Higher-rated properties are generally priced higher, as they indicate guest satisfaction and trust.
+\end{itemize}
+
+These results suggest that hosts could benefit by highlighting these features in their listings or investing in improvements related to these attributes.
+
+\section{Discussion}
+The findings provide several actionable insights for Airbnb hosts:
+\begin{enumerate}
+    \item Hosts can optimize pricing by focusing on critical features such as bedrooms, bathrooms, and positive reviews.
+    \item Improving guest experience to boost review scores could allow hosts to charge higher prices, as listings with better reviews tend to attract more bookings.
+    \item The model’s performance could be further enhanced by including additional neighborhood-specific or property-type data, which could capture more localized pricing trends.
+\end{enumerate}
+
+\section{Conclusion}
+This analysis uses the CRISP-DM framework to uncover factors influencing Airbnb pricing in Seattle. Our findings reveal that features such as the number of bedrooms, bathrooms, and review scores are highly influential in determining listing prices. By focusing on these aspects, hosts can set more competitive prices and improve listing performance. Future research could incorporate more detailed neighborhood data to provide even more localized insights.
+
+\section{References}
+\begin{itemize}
+    \item CRISP-DM 1.0. \textit{Step-by-step data mining guide}. Retrieved from \url{https://www.the-modeling-agency.com/crisp-dm.pdf}
+    \item Airbnb Inside. \textit{Seattle Airbnb Open Data}. Retrieved from \url{https://www.kaggle.com/airbnb/seattle}
+\end{itemize}
+
+\end{document}
